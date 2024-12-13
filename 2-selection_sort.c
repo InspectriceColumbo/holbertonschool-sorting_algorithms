@@ -26,13 +26,16 @@ void selection_sort(int *array, size_t size)
 		for (inner = outer + 1; inner < size; inner++)
 		{
 			if (array[inner] < array[smallest])
-			{
 				smallest = inner;
-				temp = array[outer]; 
-				array[outer] = array[inner];
-				array[inner] = temp;
-			}
-			print_array(array, size);
 		}
+		
+		if (smallest != outer)
+		{
+			temp = array[outer]; 
+			array[outer] = array[smallest];
+			array[smallest] = temp;
+		
+		print_array(array, size);
+		}		
 	}
 }
