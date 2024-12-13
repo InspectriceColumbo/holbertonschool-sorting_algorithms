@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include "sort.h"
+
+/**
+ * selection_sort - Sorts an array of integers in ascending order by using..
+ * ..the selection sort algorithm
+ * @array: Array to be sorted
+ * @size: Number of integers in the array
+ * Return: none (void)
+ */
+
+void selection_sort(int *array, size_t size)
+{
+	size_t outer;
+	size_t inner;
+	size_t smallest;
+	int temp;
+
+	if (array == NULL || size < 2)
+		return;
+
+	for (outer = 0; outer < size - 1; outer++)
+	{
+		smallest = outer;
+
+		for (inner = outer + 1; inner < size; inner++)
+		{
+			if (array[inner] < array[smallest])
+			{
+				smallest = inner;
+				temp = array[outer]; 
+				array[outer] = array[inner];
+				array[inner] = temp;
+			}
+			print_array(array, size);
+		}
+	}
+}
