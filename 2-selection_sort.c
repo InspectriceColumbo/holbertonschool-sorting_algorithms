@@ -14,7 +14,7 @@ void selection_sort(int *array, size_t size)
 	size_t smallest;
 	int temp;
 
-	for (outer = 0; outer < size - 1; outer++)
+	for (outer = 0; outer < size; outer++)
 	{
 		smallest = outer;
 		for (inner = outer + 1; inner < size; inner++)
