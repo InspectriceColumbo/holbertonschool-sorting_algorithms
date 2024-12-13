@@ -10,6 +10,7 @@
  * @n: Integer stored in the node
  * @prev: Pointer to the previous element of the list
  * @next: Pointer to the next element of the list
+ * Info: A list/array does not need to be sorted if its size is less than 2
  */
 typedef struct listint_s
 {
